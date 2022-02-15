@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+.test.vertical-timeline.vertical-timeline--two-columns {
+  max-width: 768px;
+}
+
+.test.vertical-timeline::before {
+  background: rgb(1, 191, 113);
+}
+
+/* ===== SKILLS =====*/
+.skills__container {
+  row-gap: 0;
+}
+
+.skills__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.skills__icon,
+.skills__arrow {
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+}
+
+.skills__icon {
+  margin-right: 0.75rem;
+  color: rgb(1, 191, 113);
+}
+
+.skills__title {
+  font-size: 1.125rem;
+}
+
+.skills__subtitle {
+  row-gap: 1.5rem;
+}
+
+.skills__list {
+  font-size: 0.813rem;
+  padding-left: 2.7rem;
+}
+
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skills__name {
+  font-size: 0.938rem;
+  font-weight: 500;
+}
+
+.carousel {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.left-arrow {
+  min-width: 48px;
+  min-height: 48px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+/*position: absolute;*/
+
+.right-arrow {
+  min-width: 48px;
+  min-height: 48px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+/*position: absolute;*/
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  margin: 48px;
+}
