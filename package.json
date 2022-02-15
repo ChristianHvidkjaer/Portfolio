@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website",
-  "homepage": "https://ChristianHvidkjaer.github.io/",
+  "homepage": "https://ChristianHvidkjaer.github.io/portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
+    "clean": "gh-pages-clean",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",

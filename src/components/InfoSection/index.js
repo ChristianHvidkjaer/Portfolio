@@ -60,7 +60,7 @@ const InfoSection = ({
               <ImgWrap>
                 <Img src={img} alt={alt} />
               </ImgWrap>
-              <a href="/files/English_Resume_Christian_Hvidkjær.pdf" download={"download"}>download</a>
+              <a href="English_Resume_Christian_Hvidkjær.pdf" download={"download"}>download</a>
             </Column2>
           </InfoRow>
         </InfoWrapper>
