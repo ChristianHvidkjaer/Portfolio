@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bc72f423.css",
-    "main.js": "/portfolio/static/js/main.6a0ed520.js",
+    "main.js": "/portfolio/static/js/main.9cc78a32.js",
     "static/js/787.c8eee47a.chunk.js": "/portfolio/static/js/787.c8eee47a.chunk.js",
     "static/media/video.mp4": "/portfolio/static/media/video.17cf6613e577f40dfa5b.mp4",
     "static/media/acme_03.png": "/portfolio/static/media/acme_03.79779a6da6d7509e871e.png",
@@ -31,6 +31,8 @@
     "static/media/skullbasher_03.PNG": "/portfolio/static/media/skullbasher_03.1f0bdde256d91c0f2f33.PNG",
     "static/media/european_islands_04.jfif": "/portfolio/static/media/european_islands_04.3ee389ba8d46c2af041b.jfif",
     "static/media/skullbasher_02.PNG": "/portfolio/static/media/skullbasher_02.f259b9ff620c1cb0609c.PNG",
+    "static/media/image_01.png": "/portfolio/static/media/image_01.ebf1f61584ee1409f054.png",
+    "static/media/image_02.PNG": "/portfolio/static/media/image_02.0a41e1f6ced657bfef4c.PNG",
     "static/media/european_islands_03.jfif": "/portfolio/static/media/european_islands_03.aab2f1512b9018cc2bbe.jfif",
     "static/media/european_islands_02.jfif": "/portfolio/static/media/european_islands_02.65b336be6da0e57ba4c3.jfif",
     "static/media/provinceanalyzer_01.PNG": "/portfolio/static/media/provinceanalyzer_01.e86c93619fc30c2fba1f.PNG",
@@ -39,7 +41,10 @@
     "static/media/paradoxnodeeditor_02.PNG": "/portfolio/static/media/paradoxnodeeditor_02.cce1738da963e60c9359.PNG",
     "static/media/paradoxnodeeditor_04.PNG": "/portfolio/static/media/paradoxnodeeditor_04.c46c00ab36b0d2781e15.PNG",
     "static/media/provinceanalyzer_03.PNG": "/portfolio/static/media/provinceanalyzer_03.c0df9e85d11a278dd11d.PNG",
+    "static/media/image_03.PNG": "/portfolio/static/media/image_03.bfbaa76e9832252209d8.PNG",
+    "static/media/image_01.PNG": "/portfolio/static/media/image_01.58a11a25962dfbd35006.PNG",
     "static/media/profile.jpg": "/portfolio/static/media/profile.f2b063f96cb44e9b69ae.jpg",
+    "static/media/image_03.png": "/portfolio/static/media/image_03.4be48f49ab423e41e18a.png",
     "static/media/european_islands_01.jfif": "/portfolio/static/media/european_islands_01.e04c2a83f605d7e3c3f0.jfif",
     "static/media/svg-1.svg": "/portfolio/static/media/svg-1.198c883546a77ed301550e05e51d4c28.svg",
     "static/media/gamejamrandomizer_01.PNG": "/portfolio/static/media/gamejamrandomizer_01.4290711e397559fe355a.PNG",
@@ -47,6 +52,8 @@
     "static/media/paradoxnodeeditor_05.PNG": "/portfolio/static/media/paradoxnodeeditor_05.a952f7d4357a86b51079.PNG",
     "static/media/paradoxnodeeditor_03.PNG": "/portfolio/static/media/paradoxnodeeditor_03.1326b2514b2ed94fc738.PNG",
     "static/media/gamejamrandomizer_04.PNG": "/portfolio/static/media/gamejamrandomizer_04.fd6d20935473f18bb4bf.PNG",
+    "static/media/image_04.png": "/portfolio/static/media/image_04.dde22520c898f5ee0a24.png",
+    "static/media/image_02.png": "/portfolio/static/media/image_02.c77cc6dfca500ed34684.png",
     "static/media/kislev_04.jfif": "/portfolio/static/media/kislev_04.249f83a1f82ae68b93b7.jfif",
     "static/media/Estalia_04.jfif": "/portfolio/static/media/Estalia_04.3701f5eee01e570b9fa7.jfif",
     "static/media/paradoxnodeeditor_01.PNG": "/portfolio/static/media/paradoxnodeeditor_01.368a53790c7ef934250c.PNG",
@@ -56,11 +63,11 @@
     "static/media/svg-3.svg": "/portfolio/static/media/svg-3.4d0473362d8eba2f81d1b9cd6945ac6c.svg",
     "index.html": "/portfolio/index.html",
     "main.bc72f423.css.map": "/portfolio/static/css/main.bc72f423.css.map",
-    "main.6a0ed520.js.map": "/portfolio/static/js/main.6a0ed520.js.map",
+    "main.9cc78a32.js.map": "/portfolio/static/js/main.9cc78a32.js.map",
     "787.c8eee47a.chunk.js.map": "/portfolio/static/js/787.c8eee47a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc72f423.css",
-    "static/js/main.6a0ed520.js"
+    "static/js/main.9cc78a32.js"
   ]
 }
