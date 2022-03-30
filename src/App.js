@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import SideBar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch  } from "react-router-dom";
 import Home from "./pages";
 import Footer from "./components/Footer";
 import PortFolioPage from "./pages/Portfolio";

@@ -102,6 +102,21 @@ const Qualifications = () => {
               contentArrowStyle={{
                 borderRight: "7px solid  rgb(1, 191, 113)",
               }}
+              date="22. Jan - 06. Apr 2018"
+              iconStyle={{ background: "#010606", color: "rgb(1, 191, 113)" }}
+              icon={<MdWork />}
+            >
+              <h3 className="vertical-timeline-element-title">Internship</h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Bolvërk Games, Copenhagen
+              </h4>
+              <p>Worked on a Prototype for a VR Game</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentArrowStyle={{
+                borderRight: "7px solid  rgb(1, 191, 113)",
+              }}
               date="2018 - 2020"
               iconStyle={{ background: "#010606", color: "rgb(1, 191, 113)" }}
               icon={<MdWork />}
@@ -111,6 +126,21 @@ const Qualifications = () => {
                 Immeo P/S, Copenhagen
               </h4>
               <p>Student Job</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentArrowStyle={{
+                borderRight: "7px solid  rgb(1, 191, 113)",
+              }}
+              date="26. Aug - 01. Nov 2019"
+              iconStyle={{ background: "#010606", color: "rgb(1, 191, 113)" }}
+              icon={<MdWork />}
+            >
+              <h3 className="vertical-timeline-element-title">Internship</h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                TeesuVac, Copenhagen
+              </h4>
+              <p>Created React app for handling internal tests and files</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"

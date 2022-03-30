@@ -5,6 +5,7 @@ import {
   LeftArrow,
   RightArrow,
   CarouselSlide,
+  CarouselImage
 } from "./CarouselElements";
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -23,15 +24,15 @@ const Carousel = ({ slides }) => {
   }
 
   return (
-    <CarouselContainer>
+    <CarouselContainer style={{height: "90%"}}>
       <LeftArrow onClick={prevSlide} />
-
       {slides.map((slide, index) => {
         return (
           <CarouselSlide
             current={current}
             key={index}
             className={index === current ? "slide active" : "slide"}
+            style={{height: index === current ? "100%": 0, width: index === current ? "100%": 0}}
           >
             {index === current && (
               <img src={slide.image} alt="image" className="carousel-image" />
@@ -66,4 +67,25 @@ export default Carousel;
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
     </section>
 
+*/
+
+/*
+<CarouselContainer style={{height: "90%"}}>
+      <LeftArrow onClick={prevSlide} />
+
+      {slides.map((slide, index) => {
+        return (
+          <CarouselSlide
+            current={current}
+            key={index}
+            className={index === current ? "slide active" : "slide"}
+          >
+            {index === current && (
+              <img src={slide.image} alt="image" className="carousel-image" />
+            )}
+          </CarouselSlide>
+        );
+      })}
+      <RightArrow onClick={nextSlide} />
+    </CarouselContainer>
 */

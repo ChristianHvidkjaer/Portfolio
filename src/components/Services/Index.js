@@ -30,6 +30,7 @@ function findUsedTags() {
       }
     }
   }
+  usedTagsList.sort(function(a, b){return a.order-b.order})
   return usedTagsList;
 }
 

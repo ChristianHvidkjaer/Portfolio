@@ -37,10 +37,10 @@ const Footer = () => {
               christian.hvidkjaer@gmail.com
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" aria-label="Linkedin">
+              <SocialIconLink href="https://www.linkedin.com/in/christian-hvidkj%C3%A6r-842a67164/" target="_blank" aria-label="Linkedin">
                 <FaLinkedin />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Github">
+              <SocialIconLink href="https://github.com/ThePrograminator" target="_blank" aria-label="Github">
                 <FaGithub />
               </SocialIconLink>
             </SocialIcons>

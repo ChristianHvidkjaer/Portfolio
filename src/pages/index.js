@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", flexDirection: "column", width: "auto"}}>
         
         <InfoSection {...homeObjOne} />
         <Qualifications />

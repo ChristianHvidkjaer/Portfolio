@@ -44,6 +44,7 @@ export const ServicesWrapper = styled.div`
 
 export const ServicesFilterContainer = styled.div`
   width: 500px;
+  max-width: fit-content;
   padding: 8px;
   border-bottom: 2px solid rgb(1, 191, 113);
 
@@ -110,7 +111,7 @@ export const ServicesH1 = styled.h1`
   margin-top: 32px;
   margin-bottom: 32px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     font-size: 2rem;
   }
 `;
@@ -124,6 +125,9 @@ export const ServicesP = styled.p`
   font-size: 1rem;
   text-align: center;
   max-height: 80px;
+  @media screen and (max-width: 600px) {
+    font-size: 0.80rem;
+  }
 `;
 
 export const ServicesTab = styled.div`

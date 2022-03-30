@@ -39,6 +39,10 @@ export const QualificationsTitle = styled.h1`
   text-transform: uppercase;
   margin: 32px 32px;
   color: rgb(1, 191, 113);
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.0rem;
+  }
 `;
 
 export const QualificationItem = styled.div`

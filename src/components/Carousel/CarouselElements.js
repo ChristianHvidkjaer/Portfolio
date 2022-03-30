@@ -3,11 +3,25 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 export const CarouselContainer = styled.section`
   position: relative;
-  height: 100%;
+  height: 90%;
+  width: 80%;
   display: flex;
   justify-content: center;
+  flex-direction:column;
   align-items: center;
-  margin: 24px;
+  //margin: 24px;
+
+  @media screen and (max-width: 950px) {
+    max-height: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    max-height: 300px;
+  }
+
+  @media screen and (max-width: 350px) {
+    max-height: 200px;
+  }
 `;
 
 export const LeftArrow = styled(FaArrowAltCircleLeft)`
@@ -71,5 +85,12 @@ export const RightArrow = styled(FaArrowAltCircleRight)`
 export const CarouselSlide = styled.div`
   opacity: 0;
   transition-duration: 1s ease;
-  height: 100%;
+
+  //max-height: inherit;
+  //max-width: inherit;
+`;
+
+export const CarouselImage = styled.div`
+   width: 100%;
+  border-radius: 10px;
 `;

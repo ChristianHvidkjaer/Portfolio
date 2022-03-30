@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../ButtonElements";
+import { Button, AButton } from "../ButtonElements";
 import {
   InfoContainer,
   InfoWrapper,
@@ -43,16 +43,22 @@ const InfoSection = ({
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button
-                    to="/English_Resume_Christian_Hvidkjær.pdf"
+                  <a
                     target="_blank"
+                    href="files/English_Resume_Christian_Hvidkjær.pdf"
                     download
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
+                    style={{ textDecoration: "none" }}
                   >
-                    {buttonLabel}{" "}
-                  </Button>
+                    <BtnWrap>
+                      <AButton
+                        primary={primary ? 1 : 0}
+                        dark={dark ? 1 : 0}
+                        dark2={dark2 ? 1 : 0}
+                      >
+                        {buttonLabel}
+                      </AButton>
+                    </BtnWrap>
+                  </a>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
@@ -60,7 +66,6 @@ const InfoSection = ({
               <ImgWrap>
                 <Img src={img} alt={alt} />
               </ImgWrap>
-              <a href="English_Resume_Christian_Hvidkjær.pdf" download={"download"}>download</a>
             </Column2>
           </InfoRow>
         </InfoWrapper>
@@ -70,3 +75,16 @@ const InfoSection = ({
 };
 
 export default InfoSection;
+
+/*
+<Button
+                    to="files/English_Resume_Christian_Hvidkjær.pdf"
+                    target="_blank"
+                    download
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {buttonLabel}{" "}
+                  </Button>
+*/
