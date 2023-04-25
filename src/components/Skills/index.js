@@ -12,6 +12,14 @@ import {
   SkillsArrow,
   SkillsName,
   SkillsNameList,
+  SkillsIconFrontend,
+  SkillsIconMobile,
+  SkillsIconServer,
+  SkillsIconCode,
+  SkillsIconDatabase,
+  SkillsIconTools,
+  SkillsIconCloud,
+  SkillsIconFrontendFramework,
 } from "./SkillsElements";
 import SkillsAccordionCard from "./SkillsAccordion";
 
@@ -22,12 +30,14 @@ const Skills = () => {
       <SkillsH1>Skills</SkillsH1>
       <SkillsH2>My Technical level</SkillsH2>
       <SkillsWrapper>
-        <SkillsAccordionCard title={"Frontend"} skillsNameList={["HTML","CSS","Sass", "Javascript"]}/>
-        <SkillsAccordionCard title={"Backend"} skillsNameList={["Java","C#","C++", "Python"]}/>
-        <SkillsAccordionCard title={"Frameworks"} skillsNameList={["ASP.net","Nodejs (Express)","React", "React Native", "Electron", "Django", "AngularJS"]}/>
-        <SkillsAccordionCard title={"Databases"} skillsNameList={["Microsoft SQL","MYSQL","PostgreSQL", "MongoDB", "Neo4J", "RavenDB"]}/>
-        <SkillsAccordionCard title={"Tools"} skillsNameList={["Intellij / Android Studio","Visual Studio / Code","Jira", "Git hub", "Unity", "Blender"]}/>
-        <SkillsAccordionCard title={"Platforms"} skillsNameList={["Azure","Visual Studio / Code","EPI Server", "InRiver"]}/>
+        <SkillsAccordionCard icon={<SkillsIconFrontendFramework />} title={"Frontend Frameworks"} skillsNameList={["React", "AngularJS", "Electron"]}/>
+        <SkillsAccordionCard icon={<SkillsIconFrontend />} title={"Frontend Languages"} skillsNameList={["HTML","CSS","Sass", "Javascript"]}/>
+        <SkillsAccordionCard icon={<SkillsIconMobile />} title={"Mobile Development"} skillsNameList={["React Native", "Xamarin"]}/>
+        <SkillsAccordionCard icon={<SkillsIconServer />} title={"Backend Frameworks"} skillsNameList={["ASP.net / Core","Nodejs (Express)", "Django"]}/>
+        <SkillsAccordionCard icon={<SkillsIconCode />} title={"Code Languages"} skillsNameList={["Java","C#","C++", "Python"]}/>
+        <SkillsAccordionCard icon={<SkillsIconDatabase />} title={"Databases"} skillsNameList={["Microsoft SQL","MYSQL","PostgreSQL", "MongoDB", "Neo4J", "RavenDB"]}/>
+        <SkillsAccordionCard icon={<SkillsIconTools />} title={"Tools"} skillsNameList={["Intellij / Android Studio","Visual Studio / Code","Jira", "Git hub", "Unity", "Blender"]}/>
+        <SkillsAccordionCard icon={<SkillsIconCloud />} title={"Platforms"} skillsNameList={["Azure","EPI Server", "InRiver"]}/>
       </SkillsWrapper>
     </SkillsContainer>
   );

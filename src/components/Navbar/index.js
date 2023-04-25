@@ -26,6 +26,15 @@ const Navbar = ({ toggle }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
+    const path = window.location.href;
+    if (path.includes("#")) {
+      var id = `${path.substring(path.indexOf("#") + 1)}`
+      id = id.replace("/", "");
+      const anchor = document.getElementById(id)
+      if(anchor){
+        anchor.scrollIntoView({ behavior: "smooth" })
+      }
+    }
   }, [scrollNav]);
 
   const toggleHome = () => {

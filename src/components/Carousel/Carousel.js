@@ -24,7 +24,7 @@ const Carousel = ({ slides }) => {
   }
 
   return (
-    <CarouselContainer style={{height: "90%"}}>
+    <CarouselContainer style={{height: "80%"}}>
       <LeftArrow onClick={prevSlide} />
       {slides.map((slide, index) => {
         return (
@@ -32,7 +32,7 @@ const Carousel = ({ slides }) => {
             current={current}
             key={index}
             className={index === current ? "slide active" : "slide"}
-            style={{height: index === current ? "100%": 0, width: index === current ? "100%": 0}}
+            style={{height: index === current ? "80%": 0, width: index === current ? "80%": 0}}
           >
             {index === current && (
               <img src={slide.image} alt="image" className="carousel-image" />

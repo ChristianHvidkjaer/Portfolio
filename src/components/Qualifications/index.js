@@ -72,7 +72,7 @@ const Qualifications = () => {
               contentArrowStyle={{
                 borderLeft: "7px solid  rgb(1, 191, 113)",
               }}
-              date="2020 - Present"
+              date="2020 - 2022"
               iconStyle={{ background: "#010606", color: "rgb(1, 191, 113)" }}
               icon={<MdSchool />}
             >
@@ -155,7 +155,22 @@ const Qualifications = () => {
               <h4 className="vertical-timeline-element-subtitle">
                 Immeo P/S, Copenhagen
               </h4>
-              <p>Full Time</p>
+              <p>Full Time - Backend and Frontend development</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentArrowStyle={{
+                borderRight: "7px solid  rgb(1, 191, 113)",
+              }}
+              date="2022 Aug - Present"
+              iconStyle={{ background: "#010606", color: "rgb(1, 191, 113)" }}
+              icon={<MdWork />}
+            >
+              <h3 className="vertical-timeline-element-title">Mobile Developer</h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Dalux ApS, Copenhagen
+              </h4>
+              <p>Full Time - Xamarin Mobile development and Backend</p>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </QualificationItem>

@@ -4,7 +4,6 @@ import { FaAngleDown } from "react-icons/fa";
 import {
   SkillsCard,
   SkillsTitle,
-  SkillsIcon,
   SkillsArrow,
   SkillsArrowUp,
   SkillsName,
@@ -21,8 +20,8 @@ const SkillsAccordionCard = (props) => {
   return (
     <SkillsCard style={{ maxHeight: open ? "400px" : "100px" }}>
       <div className="skills__header">
-        <SkillsIcon />
-        <SkillsTitle>{props.title}</SkillsTitle>
+        {props.icon}
+        <SkillsTitle large={0}>{props.title}</SkillsTitle>
         {open ? (
           <SkillsArrow onClick={handleOnClick} />
         ) : (

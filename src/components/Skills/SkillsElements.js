@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BiBracket } from "react-icons/bi";
+import { BiBracket, BiMobileAlt, BiServer, BiCylinder, BiCloud, BiCode, BiLaptop, BiWrench, BiPaint } from "react-icons/bi";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 export const SkillsContainer = styled.div`
@@ -84,12 +84,54 @@ export const SkillsTitle = styled.h2`
   display: flex;
   justify-content: space-between;
   margin: 0.75rem;
+  font-size: ${({ large }) => (large ? "2rem" : "1rem")};
 `;
 
 export const SkillsIcon = styled(BiBracket)`
   font-size: 2rem;
   color: rgb(1, 191, 113);
 `;
+
+export const SkillsIconMobile = styled(BiMobileAlt)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
+export const SkillsIconServer = styled(BiServer)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
+export const SkillsIconDatabase = styled(BiCylinder)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
+export const SkillsIconCloud = styled(BiCloud)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
+export const SkillsIconCode = styled(BiCode)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
+export const SkillsIconFrontendFramework = styled(BiLaptop)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
+export const SkillsIconTools = styled(BiWrench)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
+export const SkillsIconFrontend = styled(BiPaint)`
+  font-size: 2rem;
+  color: rgb(1, 191, 113);
+`;
+
 
 export const SkillsArrow = styled(FaAngleDown)`
   font-size: 2rem;

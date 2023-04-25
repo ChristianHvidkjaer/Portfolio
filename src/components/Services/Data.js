@@ -13,6 +13,7 @@ export const portfolio = [
     longDescription:
       "The Game Jam Randomizer site was created to help randomize challenges for a game jam or to inspire/create ideas based on what to include in your game. The data was collected from several sources, such as Steam’s Tags and Genres. The Frontend was created using React and Bootstrap.",
     tags: [29, 26, 0, 1, 3, 11],
+    highlight: false,
     links: [
       {
         icon: <FaHome />,
@@ -49,6 +50,7 @@ export const portfolio = [
     longDescription:
       "Lord of Universalis is a mod for the Strategy Game Europa Universalis 4 made by Paradox. The mod changes the game’s historical setting from 1444-1821 to the fictional world of Lord of the Rings. Lord of Universalis was my first Large Scale mod Project that I released in 2014. 8 Years have gone by, and I still update the mod till this day. The mod’s page on Steam has been visited by over 65.000 unique visitors and downloaded by 26.000 unique users. The mod has been covered by Youtubers and has also been mentioned on a certified Gaming News site as one of the best Europa Universalis 4 Mod in 2017. https://www.rockpapershotgun.com/best-europa-universalis-4-mods",
     tags: [29, 23],
+    highlight: true,
     links: [
       {
         icon: <FaSteam />,
@@ -82,6 +84,7 @@ export const portfolio = [
     longDescription:
       "Paradox Node Editor is a Desktop Application for editing Europa Universalis 4 Missions and Hearts of Iron 4 Focus Trees. The EU4 Missions and HOI4 Focus Trees are structured as a graph of connecting nodes. I created this tool to create and edit the structures of theses graphs more easily. The application was created with a JavaScript Framework called Electron and used Create React App as the Frontend.",
     tags: [29, 25, 0, 1, 3, 11, 13],
+    highlight: false,
     links: [
       {
         icon: <FaGithub />,
@@ -113,6 +116,7 @@ export const portfolio = [
     longDescription:
       "The Martian Inspection is the final project I made in my Game World Design Master’s Course. The game is a first-person story set in the late 1950’s in an American suburban town. You are playing as an Alien from Mars whose task it is to infiltrate a home and scan items of interest inside. While you do this you learn about the Aliens’ fear of the Humans and how they comically misinterpret everyday household items as being dangerous weapons. ",
     tags: [28, 24, 22, 5],
+    highlight: true,
     links: [
       {
         icon: <FaItchIo />,
@@ -144,6 +148,7 @@ export const portfolio = [
     longDescription:
       "Principal in Principle was the first large game project I created at my Master’s course: Making Games. The game is a Simulation/Strategy Game set in an American Highschool. You are playing as the principal of a school which you have to maintain. The player has to respond to random events happening at the school while having to balance a budget. Good grades and management of the school results in bigger budgets which can then in turn mean the player can hire more teachers and enroll more students. ",
     tags: [28, 24, 22, 5],
+    highlight: true,
     links: [
       /*{
         icon: <FaWindowClose />,
@@ -175,6 +180,7 @@ export const portfolio = [
     longDescription:
       "In my Master’s Course Playable Media we had to create a Critical Design project for our Exam. My group and I came up with the idea of creating a mod, which changes the premise of a game where the player can control almost everything. So, we created a mod for Minecraft, in which there is an AI Monopoly style company that takes the land and its resources.",
     tags: [28, 23, 4],
+    highlight: false,
     links: [
       {
         icon: <FaHome />,
@@ -203,6 +209,7 @@ export const portfolio = [
     longDescription:
       "My Game Programming Course for my Master’s wanted us to create a game in a custom C++ Game Engine (The Game Engine was created by a former lecturer). We chose to create a First-Person Tower Defense game, where the player must defend a Crystal from enemies by shooting them with a crossbow and building Towers. The Game includes 3D Models by using OpenGL, Physics from Bullet Physics Engine, and the GUI uses ImGui.",
     tags: [28, 24, 6, 27],
+    highlight: false,
     links: [
       /*{
         icon: <FaWindowClose />,
@@ -259,6 +266,7 @@ export const portfolio = [
     longDescription:
       "I created this mod for Europa Universalis 4 as a side project from my main Mod: Lord of Universalis. The idea came from separating the Danish islands into their own provinces. However, one thing took another, and I ended up creating all islands in Europe as a separate province. Having this many islands creates new fun interactions in the form of Naval Strategies and gameplay. The mod was released in 2015.",
     tags: [29, 23],
+    highlight: false,
     links: [
       {
         icon: <FaSteam />,
@@ -287,6 +295,7 @@ export const portfolio = [
     longDescription:
       "When Total War: Warhammer first released in 2016 it only included special units for a couple of the main factions of the Warhammer Universe. Which meant that some of the more unknown and smaller factions in the universe such as the country of Estalia reused the units from the faction called the Empire. Looking into the lore and units I decided to add in 14 custom units based on a fan-made Estalia Strategy Book.",
     tags: [29, 23],
+    highlight: false,
     links: [
       {
         icon: <FaSteam />,
@@ -315,6 +324,7 @@ export const portfolio = [
     longDescription:
       "When Total War: Warhammer first released in 2016 it only included special units for a couple of the main factions of the Warhammer Universe. Which meant that some of the more unknown and smaller factions in the universe such as the country of Kislev reused the units from the faction called the Empire. Looking into the lore and units I decided to add in 13 custom units based on a fan-made Kislev Strategy Book.",
     tags: [29, 23],
+    highlight: false,
     links: [
       {
         icon: <FaSteam />,
@@ -343,6 +353,7 @@ export const portfolio = [
     longDescription:
       "When I created the Game Principal in Principle in my Making Games Course, I implemented a Behavior Tree for the Students and Teachers AI. However, I didn’t have the time to create a visual editing tool, so the trees were assembled in code. After some time, I felt like trying to create before mentioned Visual Editing Tool in Unity. The tool makes it much easier to edit Behavior Trees and it is very generic in that it easy to add in new types of nodes.",
     tags: [29, 22, 5],
+    highlight: false,
     links: [
       /*{
         icon: <FaWindowClose />,
@@ -371,6 +382,7 @@ export const portfolio = [
     longDescription:
       "Green Globe is the final project for my Bachelor’s Degree as a Software Developer. At the time environmental awareness and action became more noticeable in Media and News outlets. So we were inspired to create a Social Media App for creating Environmental events such as: Picking up garbage in a forest. The creator of the event could then mark on the map in which area the event will take place, users could then during the event use their geolocation to see if they were within the bounds of the marked area. The app also included a chat. The Frontend was a React Native app which communicated with GraphQL to a ASP.Net Core Microservice Architecture consisting of 7 APIs. The Gateway API used Ocelot and the Service Discovery was Consul. The Database used was RavenDB an ACID-compliant Document store.",
     tags: [28, 12, 5, 9, 0, 1, 21],
+    highlight: false,
     links: [
       {
         icon: <FaGithub />,
@@ -407,6 +419,7 @@ export const portfolio = [
     longDescription:
       "In January 2022 I joined the Global Game Jam and together with a group created the game Opticor in 48 hours. The Global Game Jam theme was Duality. Opticor is a 3D Puzzle Platformer set in a Dark Fantasy world where the player has to switch between two characters. One player was situated in a Light world and would do most of the puzzle activity, while the other character is in a dark world and does most of the Platform gameplay related actions. Using these two characters the player must progress through 10 different levels. The Game was created in Unity. ",
     tags: [29, 24, 22, 5],
+    highlight: true,
     links: [
       {
         icon: <FaHome />,
