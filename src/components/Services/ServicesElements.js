@@ -28,13 +28,29 @@ export const ServicesWrapper = styled.div`
   display: grid;
   align-items: stretch;
   grid-gap: 16px;
-  padding: 50px 50px;
+  padding: 15px 50px;
   grid-template-columns: 1fr 1fr 1fr;
   transition: 1.3s;
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 20px 20px;
+  }
+`;
+
+export const ServicesWrapperHighlighted = styled.div`
+  max-width: 1700px;
+  margin: 0 auto;
+  display: grid;
+  align-items: stretch;
+  grid-gap: 16px;
+  padding: 15px 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: 1.3s;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -117,6 +133,7 @@ export const ServicesH1 = styled.h1`
 `;
 
 export const ServicesH2 = styled.h2`
+  word-break: break-all;
   font-size: 1rem;
   margin-bottom: 10px;
 `;
@@ -182,6 +199,82 @@ export const BtnWrap = styled.div`
   display: flex;
   justify-content: space-around;
   min-width: 100%;
+`;
+
+export const Tab = styled.button`
+  border: none;
+  outline: none;
+  cursor: pointer;
+  //width: 100%;
+  position: relative;
+
+  margin-right: 0.1em;
+  font-size: 1em;
+  padding: 16px 64px;
+  border: ${props => (props.active ? "1px solid #ccc" : "")};
+  border-bottom: ${props => (props.active ? "none" : "")};
+  background-color: ${props => (props.active ? "rgb(1, 191, 113)" : "lightgray")};
+  height: ${props => (props.active ? "3em" : "2.6em; top:.4em")};
+  transition: background-color 0.5s ease-in-out;
+  min-width: 100px;
+
+  :hover {
+    background-color: white;
+  }
+`;
+
+export const Tabs = styled.div`
+  max-width: 1700px;
+  margin: 0 auto;
+  display: grid;
+  align-items: stretch;
+  grid-gap: 16px;
+  grid-template-columns: auto auto auto;
+  transition: 1.3s;
+  height: 3em;
+  justify-content: center;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto auto auto;
+    padding: 20px 20px;
+  }
+`;
+
+export const ServicesTestContainer = styled.div`
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: "#010606";
+  margin-bottom: 32px;
+  margin-top: 32px;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: auto;
+  }
+`;
+
+export const ServiceHr = styled.hr`
+  max-width: 1700px;
+  width: 100%;
+  margin-top: 0.25rem;
+  border: 2px solid rgb(1, 191, 113);
+  @media screen and (max-width: 768px) {
+    margin-top: 1.5rem;
+  }
+`;
+
+export const Content = styled.div`
+  ${props => (props.active ? "" : "display:none")}
 `;
 
 /*

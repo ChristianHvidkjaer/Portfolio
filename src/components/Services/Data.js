@@ -13,7 +13,7 @@ export const portfolio = [
     longDescription:
       "The Game Jam Randomizer site was created to help randomize challenges for a game jam or to inspire/create ideas based on what to include in your game. The data was collected from several sources, such as Steam’s Tags and Genres. The Frontend was created using React and Bootstrap.",
     tags: [29, 26, 0, 1, 3, 11],
-    highlight: false,
+    highlight: true,
     links: [
       {
         icon: <FaHome />,
@@ -84,7 +84,7 @@ export const portfolio = [
     longDescription:
       "Paradox Node Editor is a Desktop Application for editing Europa Universalis 4 Missions and Hearts of Iron 4 Focus Trees. The EU4 Missions and HOI4 Focus Trees are structured as a graph of connecting nodes. I created this tool to create and edit the structures of theses graphs more easily. The application was created with a JavaScript Framework called Electron and used Create React App as the Frontend.",
     tags: [29, 25, 0, 1, 3, 11, 13],
-    highlight: false,
+    highlight: true,
     links: [
       {
         icon: <FaGithub />,
@@ -148,7 +148,7 @@ export const portfolio = [
     longDescription:
       "Principal in Principle was the first large game project I created at my Master’s course: Making Games. The game is a Simulation/Strategy Game set in an American Highschool. You are playing as the principal of a school which you have to maintain. The player has to respond to random events happening at the school while having to balance a budget. Good grades and management of the school results in bigger budgets which can then in turn mean the player can hire more teachers and enroll more students. ",
     tags: [28, 24, 22, 5],
-    highlight: true,
+    highlight: false,
     links: [
       /*{
         icon: <FaWindowClose />,
@@ -238,6 +238,7 @@ export const portfolio = [
     longDescription:
       "I created this Desktop application using Java and Javafx in order to quickly edit files when Modding for Europa Universalis 4. EU4 is a strategy game with over 4000 provinces, each having their data in a separate .txt file. The Application works by loading in data about the mod you are creating, then the user can write queries almost like SQL in order to edit multiple files.",
     tags: [29, 25, 4],
+    highlight: true,
     links: [
       {
         icon: <FaGithub />,

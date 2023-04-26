@@ -30,12 +30,25 @@ const Navbar = ({ toggle }) => {
     if (path.includes("#")) {
       var id = `${path.substring(path.indexOf("#") + 1)}`
       id = id.replace("/", "");
-      const anchor = document.getElementById(id)
-      if(anchor){
-        anchor.scrollIntoView({ behavior: "smooth" })
+
+      if(id.includes(","))
+      {
+        var comments = id.split(",");
+        scrollToElement(comments[0])
+      }
+      else
+      {
+        scrollToElement(id)
       }
     }
   }, [scrollNav]);
+
+  const scrollToElement = (id) => {
+    const anchor = document.getElementById(id)
+    if(anchor){
+      anchor.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   const toggleHome = () => {
     scroll.scrollToTop();

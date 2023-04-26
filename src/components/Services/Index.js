@@ -1,24 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ServicesContainer,
   ServicesH1,
-  ServicesWrapper,
-  ServicesFilterContainer,
-  ServicesCard,
-  ServicesIcon,
   ServicesH2,
-  ServicesP,
-  ServicesTagWrapper,
-  ServicesSocialIcons,
-  SerivesSocialIconLink,
-  PortfolioButton,
-  BtnWrap,
+  Content,
+  Tab,
+  Tabs,
+  ServiceHr,
 } from "./ServicesElements";
+import ServiceContent from "./ServiceContent"
 import { portfolio, tags } from "./Data";
-import { PillButton } from "../ButtonElements";
-import { Button } from "../ButtonElements";
-import Carousel from "../Carousel/Carousel";
-import { CarouselData } from "../Carousel/CarouselData"
 
 function findUsedTags() {
   var usedTagsList = [];
@@ -36,16 +27,36 @@ function findUsedTags() {
   return usedTagsList;
 }
 
-function findHighlightedPortfolio() {
-  var usedTagsList = [];
+function findGamePortfolio() {
+  var elementList = [];
   for (let index = 0; index < portfolio.length; index++) {
     const element = portfolio[index];
-    if (element.highlight !== null && element.highlight) {
-        usedTagsList.push(element);
+    if (element.tags !== null && element.tags.length !== 0) {
+      for (let j = 0; j < element.tags.length; j++) {
+        const tag = element.tags[j];
+        if (tag === 23 || tag === 24)
+        elementList.push(element);
+      }
     }
   }
-  //usedTagsList.sort(function(a, b){return a.order-b.order})
-  return usedTagsList;
+  elementList.sort(function(a, b){return a.order-b.order})
+  return elementList;
+}
+
+function findSoftwarePortfolio() {
+  var elementList = [];
+  for (let index = 0; index < portfolio.length; index++) {
+    const element = portfolio[index];
+    if (element.tags !== null && element.tags.length !== 0) {
+      for (let j = 0; j < element.tags.length; j++) {
+        const tag = element.tags[j];
+        if (tag === 25 || tag === 26)
+        elementList.push(element);
+      }
+    }
+  }
+  elementList.sort(function(a, b){return a.order-b.order})
+  return elementList;
 }
 
 function createModalItem(item) {
@@ -61,102 +72,161 @@ function createModalItem(item) {
 }
 
 const usedTags = findUsedTags();
-const highlightedPortfolio = findHighlightedPortfolio();
+const gamePortfolio = findGamePortfolio();
+const softwarePortfolio = findSoftwarePortfolio();
 
 const Services = (props) => {
-  const [currentFilter, setCurrentFilter] = React.useState(-1);
-  const [fullPortfolio, setFullPortfolio] = React.useState(portfolio);
-  const [filteredPortfolio, setFilteredPortfolio] =
-    React.useState(fullPortfolio);
-    const [highligthedPortfolio, setHighligthedPortfolio] =
-    React.useState(fullPortfolio);
-  console.log("currentTab", currentFilter);
-  console.log("fullPortfolio", fullPortfolio);
+  const [active, setActive] = useState(0);
 
-  const handleFilter = (value) => {
-    if (value === -1) {
-      console.log("setting full portfolio");
-      setFilteredPortfolio(fullPortfolio);
-    } else {
-      const result = fullPortfolio.filter((item) => item.tags.includes(value));
-      console.log("result", result);
-      setFilteredPortfolio(result);
+  useEffect(() => {
+    const path = window.location.href;
+    if (path.includes("#")) {
+      var id = `${path.substring(path.indexOf("#") + 1)}`
+      id = id.replace("/", "");
+      if(id.includes(","))
+      {
+        var comments = id.split(",");
+        if(comments[1] === "games")
+          setActive(0);
+        else if (comments[1] === "software")
+          setActive(1);
+        else
+          setActive(2);
+      }
     }
-  };
+  }, []);
 
-  const handleSetFilter = (id) => {
-    var filterId = id;
-    if (currentFilter === id) filterId = -1;
-    setCurrentFilter(filterId);
-    handleFilter(filterId);
-  };
-
-  const [hover, setHover] = useState(false);
-
-  const onhover = () => {
-    setHover(!hover);
+  const handleClick = e => {
+    const index = parseInt(e.target.id, 0);
+    if (index !== active) {
+      setActive(index);
+    }
   };
 
   return (
     <ServicesContainer id="portfolio">
       <ServicesH1>Portfolio</ServicesH1>
       <ServicesH2>Highlighted Projects</ServicesH2>
-      <ServicesWrapper>
-        {highlightedPortfolio.map((item, index) => (
-          <ServicesCard className="serviceCard__item" key={index}>
-            <ServicesIcon src={item.icon} />
-            <ServicesH2>{item.title}</ServicesH2>
-            <ServicesP>{item.description}</ServicesP>
-            
+      
+      <Tabs>
+        <Tab onClick={handleClick} active={active === 0} id={0}>
+          Games
+        </Tab>
 
-            <ServicesTagWrapper>
-              {usedTags.map((tag, index) =>
-                item.tags.includes(tag.id) ? (
-                  <PillButton
-                    color={tag.color}
-                    hovercolor={tag.colorSelected}
-                    key={index}
-                    style={{
-                      borderStyle: tag.id === currentFilter ? "solid" : "none",
-                      borderWidth: tag.id === currentFilter ? "2px" : "0px",
-                      background:
-                        tag.id === currentFilter
-                          ? tag.colorSelected
-                          : tag.color,
-                    }}
-                  >
-                    {tag.name}
-                  </PillButton>
-                ) : null
-              )}
-            </ServicesTagWrapper>
-            <BtnWrap>
-              <PortfolioButton
-                primary={1}
-                big={0}
-                dark={1}
-                dark2={1}
-                onClick={() => props.openModal(createModalItem(item))}
-              >
-                Learn More
-              </PortfolioButton>
-            </BtnWrap>
-            <ServicesSocialIcons>
-              {item.links.map((link, index) => (
-                <SerivesSocialIconLink
-                  href={link.ref}
-                  target="_blank"
-                  aria-label={link.label}
-                  key={index}
-                >
-                  {link.icon}
-                </SerivesSocialIconLink>
+        <Tab onClick={handleClick} active={active === 1} id={1}>
+          Software
+        </Tab>
+        <Tab onClick={handleClick} active={active === 2} id={2}>
+          All
+        </Tab>
+      </Tabs>
+      <ServiceHr/>
+      <>
+        <Content active={active === 0}>
+          <ServiceContent items={gamePortfolio} usedTags={usedTags} highlight={true} allText={"All Game Projects"} openModal={props.openModal}/>
+        </Content>
+        <Content active={active === 1}>
+          <ServiceContent items={softwarePortfolio} usedTags={usedTags} highlight={true} allText={"All Software Projects"} openModal={props.openModal}/>
+        </Content>
+        <Content active={active === 2}>
+          <ServiceContent items={portfolio} usedTags={usedTags} highlight={false} allText={"All Projects"} openModal={props.openModal}/>
+        </Content>
+      </>
+    </ServicesContainer>
+  );
+};
+
+export default Services;
+
+/*
+
+<Tabs>
+        <Tab onClick={handleClick} active={active === 0} id={0}>
+          Games
+        </Tab>
+
+        <Tab onClick={handleClick} active={active === 1} id={1}>
+          Software
+        </Tab>
+        <Tab onClick={handleClick} active={active === 2} id={2}>
+          All
+        </Tab>
+      </Tabs>
+      <ServiceHr/>
+      <>
+        <Content active={active === 0}>
+        <ServicesTestContainer>
+            <ServicesH2>Highlighted Projects</ServicesH2>
+              <ServicesWrapperHighlighted>
+              {highlightedPortfolio.map((item, index) => (
+                <ServicesCard className="serviceCard__item" key={index}>
+                  <ServicesIcon src={item.icon} />
+                  <ServicesH2>{item.title}</ServicesH2>
+                  <ServicesP>{item.description}</ServicesP>
+                  
+
+                  <ServicesTagWrapper>
+                    {usedTags.map((tag, index) =>
+                      item.tags.includes(tag.id) ? (
+                        <PillButton
+                          color={tag.color}
+                          hovercolor={tag.colorSelected}
+                          key={index}
+                          style={{
+                            borderStyle: tag.id === currentFilter ? "solid" : "none",
+                            borderWidth: tag.id === currentFilter ? "2px" : "0px",
+                            background:
+                              tag.id === currentFilter
+                                ? tag.colorSelected
+                                : tag.color,
+                          }}
+                        >
+                          {tag.name}
+                        </PillButton>
+                      ) : null
+                    )}
+                  </ServicesTagWrapper>
+                  <BtnWrap>
+                    <PortfolioButton
+                      primary={1}
+                      big={0}
+                      dark={1}
+                      dark2={1}
+                      onClick={() => props.openModal(createModalItem(item))}
+                    >
+                      Learn More
+                    </PortfolioButton>
+                  </BtnWrap>
+                  <ServicesSocialIcons>
+                    {item.links.map((link, index) => (
+                      <SerivesSocialIconLink
+                        href={link.ref}
+                        target="_blank"
+                        aria-label={link.label}
+                        key={index}
+                      >
+                        {link.icon}
+                      </SerivesSocialIconLink>
+                    ))}
+                  </ServicesSocialIcons>
+                </ServicesCard>
               ))}
-            </ServicesSocialIcons>
-          </ServicesCard>
-        ))}
-      </ServicesWrapper>
-      <ServicesH2>All Projects</ServicesH2>
+            </ServicesWrapperHighlighted>
+          </ServicesTestContainer>
+        </Content>
+        <Content active={active === 1}>
+          <ServiceContent items={gamePortfolio} usedTags={usedTags}/>
+        </Content>
+        <Content active={active === 2}>
+          <ServiceContent items={fullPortfolio} usedTags={usedTags}/>
+        </Content>
+      </>
+
+
+*/
+
+/*
+<ServicesH2>All Projects</ServicesH2>
       <ServicesFilterContainer>
         <ServicesTagWrapper>
           {usedTags.map((tag, index) => (
@@ -234,10 +304,12 @@ const Services = (props) => {
         ))}
       </ServicesWrapper>
     </ServicesContainer>
-  );
-};
 
-export default Services;
+
+
+
+
+*/
 
 /*
 <ServicesTagPillWrap>
