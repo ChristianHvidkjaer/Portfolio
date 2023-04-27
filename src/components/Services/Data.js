@@ -457,209 +457,269 @@ export const tags = [
     name: "HTML",
     color: "#DEBE3D",
     colorSelected: "#AB8B0A",
-    order: 4
+    order: 4,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 1,
     name: "CSS",
     color: "#907609",
     colorSelected: "#AB511F",
-    order: 4
+    order: 4,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 2,
     name: "SASS",
     color: "#FFB8EC",
     colorSelected: "#FFA5E7",
-    order: 4
+    order: 4,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 3,
     name: "Javascript",
     color: "#FF705F",
     colorSelected: "#DF2512",
-    order: 4
+    order: 4,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 4,
     name: "Java",
     color: "#FE982C",
     colorSelected: "#C85120",
-    order: 4
+    order: 4,
+    gameTag: true,
+    softwareTag: true,
   },
   {
     id: 5,
     name: "C#",
     color: "#10DCFF",
     colorSelected: "#0099BF",
-    order: 4
+    order: 4,
+    gameTag: true,
+    softwareTag: true,
   },
   {
     id: 6,
     name: "C++",
     color: "#55B6FF",
     colorSelected: "#1D71C6",
-    order: 4
+    order: 4,
+    gameTag: true,
+    softwareTag: false,
   },
   {
     id: 7,
     name: "Python",
     color: "#51CD51",
     colorSelected: "#188018",
-    order: 4
+    order: 4,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 8,
     name: "ASP.NET",
     color: "#8985F7",
     colorSelected: "#5753C5",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 9,
     name: "ASP.NET Core",
     color: "#FFC51F",
     colorSelected: "#C36806",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 10,
     name: "NodeJS",
     color: "#5CBA2E",
     colorSelected: "#2E8C00",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 11,
     name: "React",
     color: "#E19344",
     colorSelected: "#AB511F",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 12,
     name: "React Native",
     color: "#FFC160",
     colorSelected: "#EDA04E",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 13,
     name: "Electron",
     color: "#9EB22F",
     colorSelected: "#607100",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 14,
     name: "Django",
     color: "#A0FE72",
     colorSelected: "#71CF43",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 15,
     name: "AngularJS",
     color: "#FFF970",
     colorSelected: "#FFD03B",
-    order: 3
+    order: 3,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 16,
     name: "Microsoft SQL",
     color: "#000",
     colorSelected: "#000",
-    order: 5
+    order: 5,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 17,
     name: "MySQL",
     color: "#000",
     colorSelected: "#000",
-    order: 5
+    order: 5,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 18,
     name: "PostgreSQL",
     color: "#000",
     colorSelected: "#000",
-    order: 5
+    order: 5,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 19,
     name: "MongoDB",
     color: "#99F299",
     colorSelected: "#72DA72",
-    order: 5
+    order: 5,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 20,
     name: "NEO4J",
     color: "#000",
     colorSelected: "#000",
-    order: 5
+    order: 5,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 21,
     name: "RavenDB",
     color: "#E467C3",
     colorSelected: "#AA2288",
-    order: 5
+    order: 5,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 22,
     name: "Unity",
     color: "#9AEFFF",
     colorSelected: "#3EE1FF",
-    order: 3
+    order: 3,
+    gameTag: true,
+    softwareTag: false,
   },
   {
     id: 23,
     name: "Mod",
     color: "#FCEE98",
     colorSelected: "#E6C645",
-    order: 2
+    order: 2,
+    gameTag: true,
+    softwareTag: false,
   },
   {
     id: 24,
     name: "Game",
     color: "#FFC2B2",
     colorSelected: "#FF8A6A",
-    order: 2
+    order: 2,
+    gameTag: true,
+    softwareTag: false,
   },
   {
     id: 25,
     name: "Software",
     color: "#9FD4FF",
     colorSelected: "#69CAFF",
-    order: 2
+    order: 2,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 26,
     name: "Web",
     color: "#DBEF6C",
     colorSelected: "#ABBF3C",
-    order: 2
+    order: 2,
+    gameTag: false,
+    softwareTag: true,
   },
   {
     id: 27,
     name: "Lua",
     color: "#BBB8FF",
     colorSelected: "#918DFF",
-    order: 4
+    order: 4,
+    gameTag: true,
+    softwareTag: false,
   },
   {
     id: 28,
     name: "School",
     color: "#8985F7",
     colorSelected: "#444CDE",
-    order: 1
+    order: 1,
+    gameTag: true,
+    softwareTag: true,
   },
   {
     id: 29,
     name: "Personal",
     color: "#FD7854",
     colorSelected: "#BF3624",
-    order: 1
+    order: 1,
+    gameTag: true,
+    softwareTag: true,
   },
 ];

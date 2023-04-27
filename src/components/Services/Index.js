@@ -123,13 +123,13 @@ const Services = (props) => {
       <ServiceHr/>
       <>
         <Content active={active === 0}>
-          <ServiceContent items={gamePortfolio} usedTags={usedTags} highlight={true} allText={"All Game Projects"} openModal={props.openModal}/>
+          <ServiceContent id={0} items={gamePortfolio} usedTags={usedTags} highlight={true} allText={"All Game Projects"} openModal={props.openModal}/>
         </Content>
         <Content active={active === 1}>
-          <ServiceContent items={softwarePortfolio} usedTags={usedTags} highlight={true} allText={"All Software Projects"} openModal={props.openModal}/>
+          <ServiceContent id={1} items={softwarePortfolio} usedTags={usedTags} highlight={true} allText={"All Software Projects"} openModal={props.openModal}/>
         </Content>
         <Content active={active === 2}>
-          <ServiceContent items={portfolio} usedTags={usedTags} highlight={false} allText={"All Projects"} openModal={props.openModal}/>
+          <ServiceContent id={2} items={portfolio} usedTags={usedTags} highlight={false} allText={"All Projects"} openModal={props.openModal}/>
         </Content>
       </>
     </ServicesContainer>

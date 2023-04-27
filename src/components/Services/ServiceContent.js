@@ -29,6 +29,18 @@ import { PillButton } from "../ButtonElements";
     return modalItem;
   }
 
+  function validTag(id, tag) {
+    if(id === 0)
+    {
+        return tag.gameTag;
+    }
+    else if (id === 1)
+    {
+        return tag.softwareTag
+    }
+    return true;
+  }
+
 const ServiceContent = (props) => {
     const [currentFilter, setCurrentFilter] = React.useState(-1);
     const [filteredPortfolio, setFilteredPortfolio] =
@@ -73,7 +85,7 @@ const ServiceContent = (props) => {
             <ServicesH2>{props.allText}</ServicesH2>
                 <ServicesFilterContainer>
                     <ServicesTagWrapper>
-                    {props.usedTags.map((tag, index) => (
+                    {props.usedTags.map((tag, index) => validTag(props.id, tag) ? (
                         <PillButton
                         color={tag.color}
                         hovercolor={tag.colorSelected}
@@ -88,7 +100,7 @@ const ServiceContent = (props) => {
                         >
                         {tag.name}
                         </PillButton>
-                    ))}
+                    ) : null)}
                     </ServicesTagWrapper>
             </ServicesFilterContainer>
 
