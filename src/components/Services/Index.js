@@ -94,7 +94,6 @@ const Services = (props) => {
   return (
     <ServicesContainer id="portfolio">
       <ServicesH1>Portfolio</ServicesH1>
-      <ServicesH2>Highlighted Projects</ServicesH2>
       
       <Tabs>
         <Tab onClick={handleClick} active={active === 0} id={0}>

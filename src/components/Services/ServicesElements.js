@@ -221,6 +221,14 @@ export const Tab = styled.button`
   :hover {
     background-color: white;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 16px 48px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 16px 32px;
+  }
 `;
 
 export const Tabs = styled.div`
