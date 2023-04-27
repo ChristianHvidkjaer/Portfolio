@@ -50,25 +50,13 @@ function findSoftwarePortfolio() {
     if (element.tags !== null && element.tags.length !== 0) {
       for (let j = 0; j < element.tags.length; j++) {
         const tag = element.tags[j];
-        if (tag === 25 || tag === 26)
+        if (tag === 25 || tag === 26 || tag === 30)
         elementList.push(element);
       }
     }
   }
   elementList.sort(function(a, b){return a.order-b.order})
   return elementList;
-}
-
-function createModalItem(item) {
-  var modalItem = { ...item };
-  modalItem.tags = [];
-  for (let index = 0; index < usedTags.length; index++) {
-    const element = usedTags[index];
-    if (item.tags.includes(element.id)) {
-      modalItem.tags.push(element);
-    }
-  }
-  return modalItem;
 }
 
 const usedTags = findUsedTags();

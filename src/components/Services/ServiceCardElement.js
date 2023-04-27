@@ -12,7 +12,7 @@ import {
 } from "./ServicesElements";
 import { PillButton } from "../ButtonElements";
 
-  function createModalItem(item, usedTags) {
+function createModalItem(item, usedTags) {
     var modalItem = { ...item };
     modalItem.tags = [];
     for (let index = 0; index < usedTags.length; index++) {
@@ -22,7 +22,7 @@ import { PillButton } from "../ButtonElements";
       }
     }
     return modalItem;
-  }
+}
 
 const ServiceCardElement = (props) => {
     const [hover, setHover] = useState(false);

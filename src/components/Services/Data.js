@@ -382,7 +382,7 @@ export const portfolio = [
       "A Social Media App for Pro-Environmental Events. Uses React Native and Communicates with GraphQL to a .Net Core Microservice",
     longDescription:
       "Green Globe is the final project for my Bachelor’s Degree as a Software Developer. At the time environmental awareness and action became more noticeable in Media and News outlets. So we were inspired to create a Social Media App for creating Environmental events such as: Picking up garbage in a forest. The creator of the event could then mark on the map in which area the event will take place, users could then during the event use their geolocation to see if they were within the bounds of the marked area. The app also included a chat. The Frontend was a React Native app which communicated with GraphQL to a ASP.Net Core Microservice Architecture consisting of 7 APIs. The Gateway API used Ocelot and the Service Discovery was Consul. The Database used was RavenDB an ACID-compliant Document store.",
-    tags: [28, 12, 5, 9, 0, 1, 21],
+    tags: [28, 12, 5, 9, 0, 1, 21, 30],
     highlight: false,
     links: [
       {
@@ -720,6 +720,15 @@ export const tags = [
     colorSelected: "#BF3624",
     order: 1,
     gameTag: true,
+    softwareTag: true,
+  },
+  {
+    id: 30,
+    name: "App",
+    color: "#ebfc55",
+    colorSelected: "#a6b23c",
+    order: 2,
+    gameTag: false,
     softwareTag: true,
   },
 ];

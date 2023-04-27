@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import {
   ServicesWrapperHighlighted,
-  ServicesCard,
-  ServicesIcon,
   ServicesH2,
-  ServicesP,
   ServicesTagWrapper,
-  ServicesSocialIcons,
-  SerivesSocialIconLink,
-  PortfolioButton,
-  BtnWrap,
   ServicesTestContainer,
   ServicesFilterContainer,
   ServicesWrapper
@@ -17,19 +10,7 @@ import {
 import ServiceCardElement from "./ServiceCardElement";
 import { PillButton } from "../ButtonElements";
 
-  function createModalItem(item, usedTags) {
-    var modalItem = { ...item };
-    modalItem.tags = [];
-    for (let index = 0; index < usedTags.length; index++) {
-      const element = usedTags[index];
-      if (item.tags.includes(element.id)) {
-        modalItem.tags.push(element);
-      }
-    }
-    return modalItem;
-  }
-
-  function validTag(id, tag) {
+function validTag(id, tag) {
     if(id === 0)
     {
         return tag.gameTag;
@@ -39,7 +20,7 @@ import { PillButton } from "../ButtonElements";
         return tag.softwareTag
     }
     return true;
-  }
+}
 
 const ServiceContent = (props) => {
     const [currentFilter, setCurrentFilter] = React.useState(-1);
